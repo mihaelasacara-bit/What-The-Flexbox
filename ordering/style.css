@@ -34,13 +34,15 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 
 .box {
-  flex:1;
+  flex:1; /* distributes evenly */
 }
 
 .box3 {
-  order:1;
+  order:1; /* by default everything is order 0; anything greater than 10, goes to the end */
 }
 
 .box5 {
-  order:2;
+  order:-1; /* also works in reverse with negative numbers */
 }
+
+/* do not use for things where users have to copy stuff, it messes up the order */
